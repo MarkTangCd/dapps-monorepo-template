@@ -1,0 +1,24 @@
+{
+  "name": "wallet-handler",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/wallet-handler/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/wallet-handler/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/wallet-handler"],
+      "options": {
+        "jestConfig": "libs/wallet-handler/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  }
+}
